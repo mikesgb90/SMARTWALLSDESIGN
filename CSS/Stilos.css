@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+  /* estilos menu general  */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1.5px;
+  }
+  * {
+   box-sizing: border-box;
+  }
+
+  img {
+  display: block;
+  max-width: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+  .section__titulo {
+    text-align: center;
+    font-size: 40px; 
+    color:#1982fb
+  }
+ 
+  .contenedor {
+    margin: auto;
+    width: 98%;
+  }
+
+  /*Estilos del header  */
+  .header {
+      height:60px;
+  }
+  
+  .header .contenedor {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .logo, .icon-menu1 {
+      margin: 5px;
+      color: #fff;
+      font-size: 45px;
+  }
+  /*  cajita de menu */
+  .icon-menu1 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background: #19fbc2;
+    color:#fff;
+    text-align:center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  /* estilos del menu */
+  .nav {
+    position: absolute;
+    top:60px;
+    left:-100%;
+    width: 100%;
+    transition: all 0.15s ;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu__link {
+    display: block;
+    padding: 20px;
+    background: #19c6fb;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu__link:hover,.select{
+    background: white;
+    color: rgb(20, 18, 18);
+  }
+  
+  .mostrar {
+    left: 0;
+  }
+ 
+
+  /* ESTILOS DEL BANNER */
+
+  .banner {
+    margin-top:-60px;
+    position: relative;
+    z-index: -1000 ;
+    margin-bottom: 20px;
+  }
+  .banner .contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: #fff;
+  }
+
+  .banner__txt {
+  display: none;
+  }
+
+
+  /*  estilos de info*/
+
+  .info__columna {
+    background: #3c4147;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  /* estilos de cursos */
+
+  .cursos__columna {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .cursos__descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+    width: 60%;
+    height:100% ;
+    padding: 5px;
+    font-size: auto;
+  }
+
+  .cursos__titulo {
+    font-size: 25px;
+    margin: 5px 0;
+  }
+
+  /* estilos del footer */
+
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+  }
+
+
+
+  .footer .social[class^="icon-"]
+   { 
+    display:inline-block;
+    color:#fff;
+    text-decoration: none;
+    font-size: 50px;
+    padding: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 0%;
+    background: gray;
+    line-height: 60px;
+  }
+
+  /* estilos responsive  tamaño smartphone*/
+
+  @media(min-width:488px) {
+    .logo{
+      font-size: 40px;
+    }
+    .banner__titulo{
+      font-size: 30px;
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    .banner__txt{
+      display: block;
+      font-size: 20px;
+      margin:7px 0;
+      text-align: center;
+    }
+
+    .info, .cursos{
+      display: flex;
+      justify-content: space-between;
+      margin-top: -80px;
+      flex-wrap:wrap ;
+
+    }
+    .info__columna{
+      width: 49%;
+    }
+    .info__titulo {
+      font-size: 30px;
+      margin:5px 0;
+    }
+    .section__titulo {
+      width:100%;
+    }
+    .cursos {
+      flex-wrap:wrap ;
+      margin-top: 0;
+    }
+    .cursos__columna {
+      width: 49%;
+    }
+    .footer .social [class^="icon-"] {
+      margin: 0 10px;
+    }
+  }
+
+  /* estilos responsive  tamaño tablet*/
+
+  @media(min-width:768px) { 
+    .banner__titulo {
+      font-size: 60px;
+    }
+    .cursos__titulo{
+    font-size: 50px;
+    }
+  }
+  /* estilos responsive  tamaño pc*/
+
+  @media(min-width:1024px) { 
+    .contenedor {
+      width:1000px ;
+    }
+    .nav {
+      position: static;
+      width: auto;
+    }
+    .menu {
+      display: flex;
+      
+    }
+    .icon-menu1{
+      display: none;
+    }
+    .menu__link {
+      background: rgba(167, 17, 134, 0.349);
+      font-size: 12px;
+    }
+    .select {
+      color:rgb(255, 255, 255)
+     
+    }
+
+    .banner__titulo {
+      font-size: 80px;
+    }
+    .cursos__titulo{
+    font-size: 60px;
+
+    }
+
+  }
